@@ -6,12 +6,12 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 19:18:49 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/12 19:19:05 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/10/12 19:39:45 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ALLOCATION_H
-# define ALLOCATION_H
+#ifndef ALLOC_H
+# define ALLOC_H
 
 # include <stdlib.h>
 # include <stddef.h>

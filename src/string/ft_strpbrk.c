@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 22:42:01 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/11 20:16:10 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/10/12 19:37:34 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,5 @@ char	*ft_strpbrk(const char *s, const char *accept)
 		return (NULL);
 	if (ft_strchr(accept, *s))
 		return ((char *)s);
-	return(ft_strpbrk(s + 1, accept));
+	return (ft_strpbrk(s + 1, accept));
 }
-

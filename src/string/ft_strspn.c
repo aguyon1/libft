@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 18:33:01 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/11 20:16:10 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/10/12 19:38:49 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,3 @@ size_t	ft_strspn(const char *s, const char *accept)
 		i++;
 	return (i);
 }
-

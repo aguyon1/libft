@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:29:58 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/11 20:16:10 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/10/12 19:37:49 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	res[i] = '\0';
 	return (res);
 }
-

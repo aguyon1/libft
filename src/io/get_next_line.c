@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 17:48:42 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/11 20:16:10 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/10/12 19:40:54 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@
 // 	}
 // 	return (1);
 // }
-
-
 // int	get_next_line(int fd, char **line)
 // {
 // 	static char	stock[BUFFER_SIZE + 1] = "";
@@ -92,21 +90,12 @@
 // 		return (0);
 // }
 
-
-/*
-
-	Hello
-
-
-
-*/
-
 char	*get_next_line(int fd)
 {
 	static char	buffer[BUFFER_SIZE + 1] = {};
-	char	*line;
-	ssize_t	nb_bytes;
-	size_t	pos;
+	char		*line;
+	ssize_t		nb_bytes;
+	size_t		pos;
 
 	line = ft_strdup("");
 	if (line == NULL)
@@ -123,7 +112,7 @@ char	*get_next_line(int fd)
 		if (nb_bytes == -1)
 			return (free(line), NULL);
 		if (nb_bytes == 0)
-			break;
+			break ;
 		buffer[nb_bytes] = '\0';
 	}
 	if (*line == '\0')

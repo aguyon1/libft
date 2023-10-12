@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:51:26 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/11 20:48:37 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/10/12 19:38:40 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *res;
+	char	*res;
 
 	res = 0;
 	while (1)

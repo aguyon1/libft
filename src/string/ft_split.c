@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 18:48:16 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/11 20:16:10 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/10/12 19:38:30 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	**ft_split(const char *str, const char *sep)
 {
 	char **const	strs = malloc(sizeof(char *) * get_nb_words(str, sep));
 	size_t			len_word;
-	register size_t			i;
+	register size_t	i;
 
 	if (strs == NULL)
 		return (NULL);
