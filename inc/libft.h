@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:00:08 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/13 12:14:53 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/10/13 16:49:18 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <limits.h>
 # include <stdbool.h>
 # include <stdarg.h>
+# include "libopen.h"
 # include "alloc.h"
 
 # ifndef BUFFER_SIZE

@@ -6,7 +6,7 @@
 #    By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 23:06:31 by aguyon            #+#    #+#              #
-#    Updated: 2023/10/13 13:33:20 by aguyon           ###   ########.fr        #
+#    Updated: 2023/10/13 16:20:28 by aguyon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,8 @@ DIR_XLIB		=	xlib/
 DIR_PRINTF		=	printf/
 
 DIR_LIB_ALLOC	=	liballoc/
+
+DIR_LIB_OPEN	=	libopen/
 
 NAME_ALLOC		=	ft_calloc.c \
 					ft_realloc.c
@@ -127,6 +129,8 @@ NAME_PRINTF		=	ft_printf.c \
 
 NAME_LIB_ALLOC	=	allocation.c allocation_utils.c allocation_no_exit.c
 
+NAME_LIB_OPEN	=	handle_fds_array.c xopen.c xclose.c xclose_all.c
+
 SRC_ALLOC		=	$(addprefix ${DIR_ALLOC}, ${NAME_ALLOC})
 
 SRC_BTREE		=	$(addprefix ${DIR_BTREE}, ${NAME_BTREE})
@@ -147,21 +151,25 @@ SRC_PRINTF		=	$(addprefix ${DIR_PRINTF}, ${NAME_PRINTF})
 
 SRC_LIB_ALLOC	=	$(addprefix ${DIR_LIB_ALLOC}, ${NAME_LIB_ALLOC})
 
+SRC_LIB_OPEN	=	$(addprefix ${DIR_LIB_OPEN}, ${NAME_LIB_OPEN})
+
 DIR_SRC			=	src/
 
-SRC_NAME		=	$(SRC_ALLOC) $(SRC_BTREE) $(SRC_CONVERT) $(SRC_IO) $(SRC_LIST) $(SRC_PREDICATE) $(SRC_STRING) $(SRC_XLIB) $(SRC_PRINTF) $(SRC_LIB_ALLOC)
+SRC_NAME		=	$(SRC_ALLOC) $(SRC_BTREE) $(SRC_CONVERT) $(SRC_IO) $(SRC_LIST) \
+					$(SRC_PREDICATE) $(SRC_STRING) $(SRC_XLIB) $(SRC_PRINTF) \
+					$(SRC_LIB_ALLOC) $(SRC_LIB_OPEN)
 
 SRC				=	$(addprefix $(DIR_SRC), $(SRC_NAME))
 
 DIR_HEADER		=	inc/
 
-HEADER			=	$(DIR_HEADER)/libft.h
+HEADER			=	$(DIR_HEADER)/libft.h $(DIR_HEADER)/alloc.h $(DIR_HEADER)/libopen.h
 
 OBJS = ${SRC:%.c=$(DIR_BUILD)/%.o}
 
 NAME = libft.a
 
-CC = cc
+CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 

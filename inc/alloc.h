@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 19:18:49 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/12 19:39:45 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/10/13 17:05:09 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ struct s_memory_list
 void			*xmalloc(size_t size);
 void			*xmalloc_dtor(size_t size, void *dtor);
 void			xfree(void *ptr);
-void			xfree_all(void) __attribute__((destructor));
+void			xfree_all(void);
 void			*xmalloc_no_exit(size_t size);
 void			*xmalloc_dtor_no_exit(size_t size, void *dtor);
 
