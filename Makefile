@@ -6,7 +6,7 @@
 #    By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 23:06:31 by aguyon            #+#    #+#              #
-#    Updated: 2023/10/13 12:15:22 by aguyon           ###   ########.fr        #
+#    Updated: 2023/10/13 13:33:20 by aguyon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,7 @@ NAME_LIST		=	ft_lstadd_back.c \
 NAME_PREDICATE	=	ft_isalnum.c \
 					ft_isalpha.c \
 					ft_isascii.c \
+					ft_isdigit.c \
 					ft_islower.c \
 					ft_isprint.c \
 					ft_isspace.c \
