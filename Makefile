@@ -6,7 +6,7 @@
 #    By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 23:06:31 by aguyon            #+#    #+#              #
-#    Updated: 2023/10/12 19:21:28 by aguyon           ###   ########.fr        #
+#    Updated: 2023/10/13 12:15:22 by aguyon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,6 +91,7 @@ NAME_STRING		=	ft_bzero.c \
 					ft_strlcpy.c \
 					ft_strlen.c \
 					ft_strmapi.c \
+					ft_strcmp.c \
 					ft_strncmp.c \
 					ft_strncpy.c \
 					ft_strndup.c \
