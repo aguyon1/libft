@@ -6,7 +6,7 @@
 #    By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 23:06:31 by aguyon            #+#    #+#              #
-#    Updated: 2023/10/14 11:09:26 by aguyon           ###   ########.fr        #
+#    Updated: 2023/10/14 16:22:55 by aguyon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -201,7 +201,7 @@ SRC_LIB_OPEN	=	$(addprefix ${DIR_LIB_OPEN}, ${NAME_LIB_OPEN})
 
 SRC_LLIST		=	$(addprefix $(DIR_LLIST), $(NAME_LLIST))
 
-SRC_LLIST		=	$(addprefix $(DIR_NTREE), $(NAME_NTREE))
+SRC_NTREE		=	$(addprefix $(DIR_NTREE), $(NAME_NTREE))
 
 DIR_SRC			=	src/
 
@@ -213,7 +213,7 @@ SRC				=	$(addprefix $(DIR_SRC), $(SRC_NAME))
 
 DIR_HEADER		=	inc/
 
-HEADER			=	$(DIR_HEADER)/libft.h $(DIR_HEADER)/alloc.h $(DIR_HEADER)/libopen.h
+HEADER			=	$(DIR_HEADER)/libft.h $(DIR_HEADER)/alloc.h $(DIR_HEADER)/libopen.h $(DIR_HEADER)/llist.h $(DIR_HEADER)/ntree.h
 
 OBJS 			=	${SRC:%.c=$(DIR_BUILD)/%.o}
 

@@ -6,15 +6,15 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 15:44:41 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/14 11:04:57 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/10/14 16:38:15 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef NTREE_H
 # define NTREE_H
 
+# include <stdbool.h>
 # include "libft.h"
-# include "stdbool.h"
 # include <string.h>
 
 typedef struct s_ntree
