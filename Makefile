@@ -6,7 +6,7 @@
 #    By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 23:06:31 by aguyon            #+#    #+#              #
-#    Updated: 2023/10/13 16:20:28 by aguyon           ###   ########.fr        #
+#    Updated: 2023/10/14 11:09:26 by aguyon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,10 @@ DIR_PRINTF		=	printf/
 DIR_LIB_ALLOC	=	liballoc/
 
 DIR_LIB_OPEN	=	libopen/
+
+DIR_LLIST		=	llist/
+
+DIR_NTREE		=	ntree/
 
 NAME_ALLOC		=	ft_calloc.c \
 					ft_realloc.c
@@ -131,6 +135,48 @@ NAME_LIB_ALLOC	=	allocation.c allocation_utils.c allocation_no_exit.c
 
 NAME_LIB_OPEN	=	handle_fds_array.c xopen.c xclose.c xclose_all.c
 
+NAME_LLIST		=	llstadd_after.c \
+					llstadd_back.c \
+					llstadd_before.c \
+					llstadd_front.c \
+					llstall_of.c \
+					llstany_of.c \
+					llstclear.c \
+					llstdelone.c \
+					llstempty.c \
+					llstextract.c\
+					llstextract_range.c\
+					llstextractone.c\
+					llstfind_if_not.c\
+					llstfind_if.c \
+					llstfind_if_reverse.c \
+					llstfind.c \
+					llstfirst.c \
+					llstfold.c \
+					llstiter.c \
+					llstlast.c \
+					llstmap_range.c \
+					llstmap.c \
+					llstmax.c \
+					llstmerge.c \
+					llstmerge.c\
+					llstmin.c \
+					llstnew.c \
+					llstnext.c \
+					llstnone_of.c \
+					llstprev.c \
+					llstremove_if.c\
+					llstremove_range.c \
+					llstremoveone.c \
+					llstreplace.c \
+					llstsize.c \
+					llstsize_range.c \
+
+NAME_NTREE		=	ntree_free.c \
+					ntree_new.c \
+					ntree_dup.c \
+					ntree_print.c
+
 SRC_ALLOC		=	$(addprefix ${DIR_ALLOC}, ${NAME_ALLOC})
 
 SRC_BTREE		=	$(addprefix ${DIR_BTREE}, ${NAME_BTREE})
@@ -153,11 +199,15 @@ SRC_LIB_ALLOC	=	$(addprefix ${DIR_LIB_ALLOC}, ${NAME_LIB_ALLOC})
 
 SRC_LIB_OPEN	=	$(addprefix ${DIR_LIB_OPEN}, ${NAME_LIB_OPEN})
 
+SRC_LLIST		=	$(addprefix $(DIR_LLIST), $(NAME_LLIST))
+
+SRC_LLIST		=	$(addprefix $(DIR_NTREE), $(NAME_NTREE))
+
 DIR_SRC			=	src/
 
 SRC_NAME		=	$(SRC_ALLOC) $(SRC_BTREE) $(SRC_CONVERT) $(SRC_IO) $(SRC_LIST) \
 					$(SRC_PREDICATE) $(SRC_STRING) $(SRC_XLIB) $(SRC_PRINTF) \
-					$(SRC_LIB_ALLOC) $(SRC_LIB_OPEN)
+					$(SRC_LIB_ALLOC) $(SRC_LIB_OPEN) $(SRC_LLIST) $(SRC_NTREE)
 
 SRC				=	$(addprefix $(DIR_SRC), $(SRC_NAME))
 
@@ -165,15 +215,15 @@ DIR_HEADER		=	inc/
 
 HEADER			=	$(DIR_HEADER)/libft.h $(DIR_HEADER)/alloc.h $(DIR_HEADER)/libopen.h
 
-OBJS = ${SRC:%.c=$(DIR_BUILD)/%.o}
+OBJS 			=	${SRC:%.c=$(DIR_BUILD)/%.o}
 
-NAME = libft.a
+NAME 			=	libft.a
 
-CC = gcc
+CC				=	gcc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS			=	-Wall -Wextra -Werror
 
-DIR_BUILD		= build
+DIR_BUILD		=	build
 
 all :	$(NAME)
 
