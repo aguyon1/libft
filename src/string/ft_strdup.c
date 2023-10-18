@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 14:11:17 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/11 20:16:10 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/10/16 15:37:32 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ char	*ft_strdup(const char *s)
 	if (res != NULL)
 		ft_strcpy(res, s);
 	return (res);
+}
+
+char	*xstrdup(const char *s)
+{
+	return (ft_strcpy(xmalloc(ft_strlen(s) + 1), s));
 }
 
 /*

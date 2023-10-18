@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 18:48:16 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/12 19:38:30 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/10/16 15:36:48 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,24 @@ char	**ft_split(const char *str, const char *sep)
 		if (strs[i] == NULL)
 			return (free_strs(strs, i), NULL);
 		i++;
+		str += len_word + ft_strspn(str + len_word, sep);
+	}
+	strs[i] = NULL;
+	return (strs);
+}
+
+char	**xsplit(const char *str, const char *sep)
+{
+	char **const	strs = xmalloc(sizeof(char *) * get_nb_words(str, sep));
+	size_t			len_word;
+	register size_t	i;
+
+	str += ft_strspn(str, sep);
+	i = 0;
+	while (*str)
+	{
+		len_word = ft_strcspn(str, sep);
+		strs[i++] = xstrndup(str, len_word);
 		str += len_word + ft_strspn(str + len_word, sep);
 	}
 	strs[i] = NULL;

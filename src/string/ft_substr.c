@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:43:43 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/11 20:16:10 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/10/16 15:38:41 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,9 @@ static size_t	min(size_t x, size_t y)
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	return (ft_strndup(s + min(start, ft_strlen(s)), len));
+}
+
+char	*xsubstr(char const *s, unsigned int start, size_t len)
+{
+	return (xstrndup(s + min(start, ft_strlen(s)), len));
 }

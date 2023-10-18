@@ -6,14 +6,14 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:24:27 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/14 16:37:11 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/10/16 15:40:18 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TYPES_H
 # define TYPES_H
 
-#include <stdbool.h>
+# include <stdbool.h>
 
 typedef void	*(*t_funptr)();
 typedef bool	(*t_predicate)(void *);

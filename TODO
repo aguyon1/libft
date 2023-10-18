@@ -1,5 +1,4 @@
--Finir l'implementation de get_next_line
 -Reorganiser le makefile et les headers
--Mettre a la norme
+-Faire des tests avec funcheck/ulimit pour les fonctions utilisant la liballoc
 -ajouter un branche dev
 -ajouter un testeur qui permettra de push uniquement si la libft est a la norme + si le testeur est positif

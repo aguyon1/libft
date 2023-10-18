@@ -6,7 +6,7 @@
 #    By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 23:06:31 by aguyon            #+#    #+#              #
-#    Updated: 2023/10/14 16:22:55 by aguyon           ###   ########.fr        #
+#    Updated: 2023/10/16 15:39:15 by aguyon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,6 @@ DIR_LIST		=	list/
 DIR_PREDICATE	=	predicate/
 
 DIR_STRING		=	string/
-
-DIR_XLIB		=	xlib/
 
 DIR_PRINTF		=	printf/
 
@@ -111,14 +109,6 @@ NAME_STRING		=	ft_bzero.c \
 					ft_strtrim.c \
 					ft_substr.c
 
-NAME_XLIB		=	xcalloc.c \
-					xrealloc.c \
-					xsplit.c \
-					xstrdup.c \
-					xstrjoin.c \
-					xstrndup.c \
-					xsubstr.c
-
 NAME_PRINTF		=	ft_printf.c \
 					ft_dprintf.c \
 					utils/print_base.c \
@@ -191,8 +181,6 @@ SRC_PREDICATE	=	$(addprefix ${DIR_PREDICATE}, ${NAME_PREDICATE})
 
 SRC_STRING		=	$(addprefix ${DIR_STRING}, ${NAME_STRING})
 
-SRC_XLIB		=	$(addprefix ${DIR_XLIB}, ${NAME_XLIB})
-
 SRC_PRINTF		=	$(addprefix ${DIR_PRINTF}, ${NAME_PRINTF})
 
 SRC_LIB_ALLOC	=	$(addprefix ${DIR_LIB_ALLOC}, ${NAME_LIB_ALLOC})
@@ -206,7 +194,7 @@ SRC_NTREE		=	$(addprefix $(DIR_NTREE), $(NAME_NTREE))
 DIR_SRC			=	src/
 
 SRC_NAME		=	$(SRC_ALLOC) $(SRC_BTREE) $(SRC_CONVERT) $(SRC_IO) $(SRC_LIST) \
-					$(SRC_PREDICATE) $(SRC_STRING) $(SRC_XLIB) $(SRC_PRINTF) \
+					$(SRC_PREDICATE) $(SRC_STRING) $(SRC_PRINTF) \
 					$(SRC_LIB_ALLOC) $(SRC_LIB_OPEN) $(SRC_LLIST) $(SRC_NTREE)
 
 SRC				=	$(addprefix $(DIR_SRC), $(SRC_NAME))
@@ -221,7 +209,7 @@ NAME 			=	libft.a
 
 CC				=	gcc
 
-CFLAGS			=	-Wall -Wextra -Werror
+CFLAGS			=	-Wall -Wextra -Werror -g3
 
 DIR_BUILD		=	build
 
