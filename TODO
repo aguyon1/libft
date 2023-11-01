@@ -7,3 +7,4 @@
 -Ajouter les fichiers ft_strappend.c et ft_strnappend.c dans le Makefile
 -Ajouter la fonction realloc a libft.h
 -Implementer la fonction xrealloc
+-Erreur dans realdine a la ligne qui contient : original_size <= size; supprimer la condition
