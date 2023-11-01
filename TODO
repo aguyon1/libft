@@ -3,4 +3,6 @@
 -ajouter un branche dev
 -ajouter un testeur qui permettra de push uniquement si la libft est a la norme + si le testeur est positif
 -Finir la sous-bibliotheque de vector (Verif)
--Merge avec la branche vector
+-Merge master avec vector
+-Ajouter les fichiers ft_strappend.c et ft_strnappend.c dans le Makefile
+-Ajouter la fonction realloc a libft.h
