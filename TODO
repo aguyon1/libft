@@ -6,3 +6,4 @@
 -Merge master avec vector
 -Ajouter les fichiers ft_strappend.c et ft_strnappend.c dans le Makefile
 -Ajouter la fonction realloc a libft.h
+-Implementer la fonction xrealloc
