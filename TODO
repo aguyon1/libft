@@ -4,3 +4,4 @@
 -ajouter un testeur qui permettra de push uniquement si la libft est a la norme + si le testeur est positif
 -Finir la sous-bibliotheque de vector (Verif)
 -Merge master avec vector
+-Regler le probleme avec strappend et strnappend
