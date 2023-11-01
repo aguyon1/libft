@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:02:48 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/16 15:40:46 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/11/01 16:36:16 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnappend(char *dest, const char *src, size_t n)
 	dest = ft_realloc(dest, len_dest + 1, len_dest + n + 1);
 	if (dest == NULL)
 		return (NULL);
-	return (ft_strncpy(dest + len_dest, src, n));
+	return (ft_strncat(dest, src, n));
 }
 
 char	*xstrnappend(char *dest, const char *src, size_t n)
@@ -29,5 +29,5 @@ char	*xstrnappend(char *dest, const char *src, size_t n)
 	dest = xrealloc(dest, len_dest + 1, len_dest + n + 1);
 	if (dest == NULL)
 		return (NULL);
-	return (ft_strncpy(dest + len_dest, src, n));
+	return (ft_strncat(dest + len_dest, src, n));
 }
