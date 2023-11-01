@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 10:18:02 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/11 20:16:10 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/11/01 16:41:26 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 char	*ft_strcat(char *dest, const char *src)
 {
-	return (ft_strcpy(ft_strchr(dest, 0), src), dest);
+	ft_strcpy(ft_strchr(dest, 0), src);
+	return (dest);
 }
