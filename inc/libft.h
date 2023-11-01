@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:00:08 by aguyon            #+#    #+#             */
-/*   Updated: 2023/11/01 16:19:47 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/11/01 16:44:31 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n);
 size_t	ft_strlen(const char *s);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strnappend(char *dest, const char *src, size_t n);
+char	*ft_strncat(char *dest, const char *src, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
 char	*ft_strndup(const char *s, size_t n);

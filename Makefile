@@ -6,7 +6,7 @@
 #    By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 23:06:31 by aguyon            #+#    #+#              #
-#    Updated: 2023/11/01 16:18:49 by aguyon           ###   ########.fr        #
+#    Updated: 2023/11/01 16:45:14 by aguyon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,6 +110,7 @@ NAME_STRING		=	ft_bzero.c \
 					ft_substr.c \
 					ft_strappend.c \
 					ft_strnappend.c \
+					ft_strncat.c \
 
 NAME_PRINTF		=	ft_printf.c \
 					ft_dprintf.c \
