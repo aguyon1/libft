@@ -29,7 +29,7 @@ int main(void)
 	char	*line;
 
 	ft_printf("%i\n", BUFFER_SIZE);
-	for (int i = 0; i < 5; i++)
+	while (1)
 	{
 		line = get_next_line(fd);
 		ft_printf("%s", line);
