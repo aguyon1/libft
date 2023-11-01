@@ -25,7 +25,7 @@ void	destructor(void)
 
 int main(void)
 {
-	int	fd = xopen("./test", O_RDONLY);
+	int	fd = xopen("/mnt/nfs/homes/aguyon/cub3d/map/map.cub", O_RDONLY);
 	char	*line;
 
 	ft_printf("%i\n", BUFFER_SIZE);
