@@ -6,7 +6,7 @@
 #    By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 23:06:31 by aguyon            #+#    #+#              #
-#    Updated: 2023/11/01 16:45:14 by aguyon           ###   ########.fr        #
+#    Updated: 2023/11/01 16:52:23 by aguyon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -212,7 +212,9 @@ NAME 			=	libft.a
 
 CC				=	gcc
 
-CFLAGS			=	-Wall -Wextra -Werror -g3
+CFLAGS			=	-Wall -Wextra -Werror
+
+DEBUG_FLAGS		= -g3
 
 DIR_BUILD		=	build
 
