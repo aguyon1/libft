@@ -6,14 +6,14 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 15:20:39 by aguyon            #+#    #+#             */
-/*   Updated: 2023/11/04 15:24:23 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/11/04 15:26:41 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ALGORITHM_H
-# define ALOGRITHM_H
+# define ALGORITHM_H
 
-#include <stddef.h>
+# include <stddef.h>
 
 typedef struct s_bsearch_arg
 {
