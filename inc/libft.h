@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:00:08 by aguyon            #+#    #+#             */
-/*   Updated: 2023/11/01 16:44:31 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/11/04 15:22:55 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <limits.h>
 # include <stdbool.h>
 # include <stdarg.h>
+# include "algorithm.h"
 # include "types.h"
 # include "libopen.h"
 # include "alloc.h"

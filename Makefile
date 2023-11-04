@@ -6,7 +6,7 @@
 #    By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 23:06:31 by aguyon            #+#    #+#              #
-#    Updated: 2023/11/01 16:52:23 by aguyon           ###   ########.fr        #
+#    Updated: 2023/11/04 15:24:08 by aguyon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,8 @@ DIR_LIB_OPEN	=	libopen/
 DIR_LLIST		=	llist/
 
 DIR_NTREE		=	ntree/
+
+DIR_ALGORITHM	=	algorithm/
 
 NAME_ALLOC		=	ft_calloc.c \
 					ft_realloc.c
@@ -170,6 +172,8 @@ NAME_NTREE		=	ntree_free.c \
 					ntree_dup.c \
 					ntree_print.c
 
+NAME_ALGORITHM	=	ft_bsearch.c \
+
 SRC_ALLOC		=	$(addprefix ${DIR_ALLOC}, ${NAME_ALLOC})
 
 SRC_BTREE		=	$(addprefix ${DIR_BTREE}, ${NAME_BTREE})
@@ -194,11 +198,14 @@ SRC_LLIST		=	$(addprefix $(DIR_LLIST), $(NAME_LLIST))
 
 SRC_NTREE		=	$(addprefix $(DIR_NTREE), $(NAME_NTREE))
 
+SRC_ALGORITHM	=	$(addprefix $(DIR_ALGORITHM), $(NAME_ALGORITHM))
+
 DIR_SRC			=	src/
 
 SRC_NAME		=	$(SRC_ALLOC) $(SRC_BTREE) $(SRC_CONVERT) $(SRC_IO) $(SRC_LIST) \
 					$(SRC_PREDICATE) $(SRC_STRING) $(SRC_PRINTF) \
-					$(SRC_LIB_ALLOC) $(SRC_LIB_OPEN) $(SRC_LLIST) $(SRC_NTREE)
+					$(SRC_LIB_ALLOC) $(SRC_LIB_OPEN) $(SRC_LLIST) $(SRC_NTREE) \
+					$(SRC_ALGORITHM)
 
 SRC				=	$(addprefix $(DIR_SRC), $(SRC_NAME))
 
