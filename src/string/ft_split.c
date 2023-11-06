@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 18:48:16 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/16 15:36:48 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/11/06 18:29:47 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,11 @@ static void	free_strs(char **strs, size_t nb_elements)
 
 char	**ft_split(const char *str, const char *sep)
 {
-	char **const	strs = malloc(sizeof(char *) * get_nb_words(str, sep));
+	char			**strs;
 	size_t			len_word;
 	register size_t	i;
 
+	strs = malloc(sizeof(char *) * (get_nb_words(str, sep) + 1));
 	if (strs == NULL)
 		return (NULL);
 	str += ft_strspn(str, sep);
@@ -63,10 +64,11 @@ char	**ft_split(const char *str, const char *sep)
 
 char	**xsplit(const char *str, const char *sep)
 {
-	char **const	strs = xmalloc(sizeof(char *) * get_nb_words(str, sep));
+	char			**strs;
 	size_t			len_word;
 	register size_t	i;
 
+	strs = xmalloc(sizeof(char *) * (get_nb_words(str, sep) + 1));
 	str += ft_strspn(str, sep);
 	i = 0;
 	while (*str)
