@@ -6,16 +6,15 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 14:18:37 by aguyon            #+#    #+#             */
-/*   Updated: 2023/11/01 14:31:09 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/12/04 12:26:58 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/vector.h"
-#include "../../inc/libft.h"
 
 int	vector_resize(t_vector *vec, size_t count)
 {
-	void	**new_array;
+	void			**new_array;
 	const size_t	original_size = sizeof (void *) * vec->total;
 	const size_t	new_size = sizeof(void *) * count;
 

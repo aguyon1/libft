@@ -6,7 +6,7 @@
 #    By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 23:06:31 by aguyon            #+#    #+#              #
-#    Updated: 2023/10/16 15:39:15 by aguyon           ###   ########.fr        #
+#    Updated: 2023/12/04 12:08:46 by aguyon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,8 +34,10 @@ DIR_LLIST		=	llist/
 
 DIR_NTREE		=	ntree/
 
+DIR_VECTOR		=	vector/
+
 NAME_ALLOC		=	ft_calloc.c \
-					ft_realloc.c
+					ft_realloc.c \
 
 NAME_BTREE		=	btree_apply_by_level.c \
 					btree_apply_infix.c \
@@ -167,6 +169,15 @@ NAME_NTREE		=	ntree_free.c \
 					ntree_dup.c \
 					ntree_print.c
 
+NAME_VECTOR		=	vector_at.c \
+					vector_clear.c \
+					vector_delone.c \
+					vector_init.c \
+					vector_push_back.c \
+					vector_resize.c \
+					vector_set.c \
+					vector_size.c \
+
 SRC_ALLOC		=	$(addprefix ${DIR_ALLOC}, ${NAME_ALLOC})
 
 SRC_BTREE		=	$(addprefix ${DIR_BTREE}, ${NAME_BTREE})
@@ -191,17 +202,20 @@ SRC_LLIST		=	$(addprefix $(DIR_LLIST), $(NAME_LLIST))
 
 SRC_NTREE		=	$(addprefix $(DIR_NTREE), $(NAME_NTREE))
 
+SRC_VECTOR		=	$(addprefix $(DIR_VECTOR), $(NAME_VECTOR))
+
 DIR_SRC			=	src/
 
 SRC_NAME		=	$(SRC_ALLOC) $(SRC_BTREE) $(SRC_CONVERT) $(SRC_IO) $(SRC_LIST) \
 					$(SRC_PREDICATE) $(SRC_STRING) $(SRC_PRINTF) \
-					$(SRC_LIB_ALLOC) $(SRC_LIB_OPEN) $(SRC_LLIST) $(SRC_NTREE)
+					$(SRC_LIB_ALLOC) $(SRC_LIB_OPEN) $(SRC_LLIST) $(SRC_NTREE) \
+					$(SRC_VECTOR) \
 
 SRC				=	$(addprefix $(DIR_SRC), $(SRC_NAME))
 
 DIR_HEADER		=	inc/
 
-HEADER			=	$(DIR_HEADER)/libft.h $(DIR_HEADER)/alloc.h $(DIR_HEADER)/libopen.h $(DIR_HEADER)/llist.h $(DIR_HEADER)/ntree.h
+HEADER			=	$(DIR_HEADER)/libft.h $(DIR_HEADER)/alloc.h $(DIR_HEADER)/libopen.h $(DIR_HEADER)/llist.h $(DIR_HEADER)/ntree.h $(DIR_HEADER)/vector.h
 
 OBJS 			=	${SRC:%.c=$(DIR_BUILD)/%.o}
 
@@ -215,7 +229,7 @@ DIR_BUILD		=	build
 
 all :	$(NAME)
 
-$(DIR_BUILD)/%.o: %.c
+$(DIR_BUILD)/%.o: %.c $(HEADER)
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 

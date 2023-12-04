@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:00:08 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/16 15:35:44 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/12/04 11:58:42 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 # include "alloc.h"
 # include "llist.h"
 # include "ntree.h"
+# include "vector.h"
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
@@ -42,6 +43,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
+void	*ft_realloc(void *ptr, size_t original_size, size_t size);
 char	*ft_itoa(int n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
