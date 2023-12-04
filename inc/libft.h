@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:00:08 by aguyon            #+#    #+#             */
-/*   Updated: 2023/11/04 15:22:55 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/12/04 12:30:52 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 # include "alloc.h"
 # include "llist.h"
 # include "ntree.h"
+# include "vector.h"
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
