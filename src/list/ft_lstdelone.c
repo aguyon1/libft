@@ -6,14 +6,19 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 09:27:27 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/11 20:16:10 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/12/04 19:25:16 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list **alst, void (*del)(void *))
 {
-	if (lst != NULL && del != NULL)
-		(del(lst->content), free(lst));
+	t_list	*node;
+
+	node = *alst;
+	if (del)
+		del(node->content);
+	free(node);
+	*alst = NULL;
 }

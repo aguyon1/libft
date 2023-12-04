@@ -6,24 +6,35 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 13:00:48 by aguyon            #+#    #+#             */
-/*   Updated: 2023/10/11 20:16:10 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/12/04 19:46:30 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem), void (*del)(void *))
 {
-	t_list	*new_lst;
-	t_list	*new_cell;
+	t_list	*list;
+	t_list	*list_last_node;
+	t_list	*new_node;
+	bool	first_loop;
 
-	new_lst = NULL;
-	while (lst)
+	list = NULL;
+	first_loop = true;
+	while (lst != NULL)
 	{
-		new_cell = ft_lstnew(f(lst->content));
-		if (new_cell == NULL)
-			return (ft_lstclear(&new_lst, del), NULL);
-		(ft_lstadd_back(&new_lst, new_cell), lst = lst->next);
+		new_node = f(lst);
+		if (new_node == NULL)
+			return (ft_lstdel(&list, del), NULL);
+		if (first_loop == true)
+		{
+			list = new_node;
+			list_last_node = new_node;
+		}
+		list_last_node->next = new_node;
+		list_last_node = list_last_node->next;
+		lst = lst->next;
+		first_loop = false;
 	}
-	return (new_lst);
+	return (list);
 }

@@ -6,7 +6,7 @@
 #    By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/04 12:30:05 by aguyon            #+#    #+#              #
-#    Updated: 2023/12/04 12:30:10 by aguyon           ###   ########.fr        #
+#    Updated: 2023/12/04 19:33:56 by aguyon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,7 @@ NAME_IO			=	ft_putchar_fd.c \
 
 NAME_LIST		=	ft_lstadd_back.c \
 					ft_lstadd_front.c \
-					ft_lstclear.c \
+					ft_lstdel.c \
 					ft_lstdelone.c \
 					ft_lstiter.c \
 					ft_lstlast.c \
@@ -242,7 +242,7 @@ all :	$(NAME)
 
 $(DIR_BUILD)/%.o: %.c $(HEADER)
 	mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(DEBUG_FLAGS) -c $< -o $@
 
 $(NAME) :	${HEADER} ${OBJS}
 			ar rcs ${NAME} ${OBJS}
