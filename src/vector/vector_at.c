@@ -6,15 +6,16 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 14:35:27 by aguyon            #+#    #+#             */
-/*   Updated: 2023/12/04 12:27:13 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/12/05 11:50:58 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/vector.h"
 
-void	*vector_at(t_vector *vec, size_t index)
+int	vector_at(t_vector *vec, size_t index, void *ret)
 {
 	if (index >= vec->total)
-		return (NULL);
-	return (vec->array[index]);
+		return (-1);
+	ft_memcpy(ret, vec->array + (vec->content_size * index), vec->content_size);
+	return (0);
 }
