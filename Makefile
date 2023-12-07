@@ -6,7 +6,7 @@
 #    By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/04 12:30:05 by aguyon            #+#    #+#              #
-#    Updated: 2023/12/04 12:30:10 by aguyon           ###   ########.fr        #
+#    Updated: 2023/12/07 14:25:56 by aguyon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -184,6 +184,7 @@ NAME_VECTOR		=	vector_at.c \
 					vector_resize.c \
 					vector_set.c \
 					vector_size.c \
+					vector_new.c \
 
 SRC_ALLOC		=	$(addprefix ${DIR_ALLOC}, ${NAME_ALLOC})
 
