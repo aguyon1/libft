@@ -6,7 +6,7 @@
 /*   By: aguyon <aguyon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 14:05:24 by aguyon            #+#    #+#             */
-/*   Updated: 2023/12/07 14:22:39 by aguyon           ###   ########.fr       */
+/*   Updated: 2023/12/07 14:32:56 by aguyon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int			vector_push_back(t_vector *vec, void *const item);
 int			vector_set(t_vector *vec, size_t index, void *const item);
 int			vector_at(t_vector *vec, size_t index, void *ret);
 // int		vector_delone(t_vector *vec, size_t index, void (*del)(void *));
-void	vector_clear(t_vector *vec);
-size_t	vector_size(t_vector *vec);
+void		vector_clear(t_vector **vec)
+size_t		vector_size(t_vector *vec);
 
 #endif
